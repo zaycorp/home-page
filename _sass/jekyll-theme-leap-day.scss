@@ -97,6 +97,29 @@ code {
   border-radius: 2px;
 }
 
+.btn-container {
+    margin: 20px 0 30px 0;
+}
+
+button {
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 12px 35px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:disabled, button:hover:disabled {
+    background: #0b2253;
+    cursor: default;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
 pre {
   padding:8px 15px;
   background: #333333;
