@@ -9,14 +9,14 @@ function load_script(src, remote = true, transfer = []) {
 }
 
 async function doJb() {
-  await load_script("src/misc.js");
+  await load_script("public/src/misc.js");
 
   try {
     version.init();
     switch (version.console) {
       case 4:
-        await load_script("src/ps4/constants.js");
-        await load_script("src/ps4/userland.js");
+        await load_script("public/src/ps4/constants.js");
+        await load_script("public/src/ps4/userland.js");
         break;
       case 5:
         //TODO
@@ -38,12 +38,12 @@ async function doJb() {
 
     logger.info("===END===");
 
-    await load_script("src/loader.js");
-    await load_script("src/workers.js");
+    await load_script("public/src/loader.js");
+    await load_script("public/src/workers.js");
 
     switch (version.console) {
       case 4:
-        await load_script("src/ps4/kernel.js");
+        await load_script("public/src/ps4/kernel.js");
         break;
       case 5:
         //TODO
@@ -109,13 +109,13 @@ async function doJb() {
     if (fn.setuid.invoke(0) === -1) {
       jailbreak();
 
-      const kpatches_rsp = await fetch(`src/ps4/patches/${constants.KPATCH}`);
+      const kpatches_rsp = await fetch(`public/src/ps4/patches/${constants.KPATCH}`);
       const kpatches_buf = await kpatches_rsp.arrayBuffer();
       const kpatches_u8 = new Uint8Array(kpatches_buf);
 
       kernel_patches(kpatches_u8);
 
-      const bin_rsp = await fetch("src/payload.bin");
+      const bin_rsp = await fetch("public/src/payload.bin");
       const bin_buf = await bin_rsp.arrayBuffer();
       const bin_u8 = new Uint8Array(bin_buf);
 
