@@ -5,7 +5,7 @@ layout: default
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 [Link to another page](./another-page.html).
-[Jailbreak PS4](./_layout/index.html).
+[Jailbreak PS4](./public/index.html).
 
 There should be whitespace between paragraphs.
 
