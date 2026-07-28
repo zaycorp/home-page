@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     {% include head-custom.html %}
-	  {% include index.html %}
+	  
   </head>
   <body>
 
@@ -46,7 +46,7 @@
       <section>
 		  
         {{ content }}
-
+{% include index.html %}
       </section>
       <footer>
         {% if site.github.is_project_page %}
