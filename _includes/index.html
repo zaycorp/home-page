@@ -6,7 +6,11 @@
   <title>CSSFontFace exploit</title>
 	    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <script src="https://code.jquery.com/jquery-3.3.0.min.js" integrity="sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4=" crossorigin="anonymous"></script>
-<!--  <link rel="stylesheet" href="includes/style.css"> -->
+
+    <link rel="stylesheet" href="/path/to/styles/default.min.css">
+    <script src="includes/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <!--  <link rel="stylesheet" href="includes/style.css"> -->
 </head>
 <body>
 
@@ -30,7 +34,7 @@
   </div>
   <div class="row">
   <div class="main-layout">
-		    <pre id="console">Ready. Awaiting execution...
+		    <pre id="console"><code class="language-html">Ready. Awaiting execution...</code>
   </pre>
 
  </div>
