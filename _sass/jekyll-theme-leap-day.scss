@@ -213,6 +213,7 @@ header {
   }
 
   p {
+    font: 40px/48px 'Copse', "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #d8d8d8;
     text-shadow:rgba(#000, 0.2) 0 1px 0;
     font-size: 18px;
@@ -224,11 +225,11 @@ header {
 
 
   .button {
-    border: 1px solid #dba500;
-    background: linear-gradient(rgb(255, 231, 136), rgb(255, 206, 56));
+    border: 1px solid #0f00db;
+    background: linear-gradient(rgb(136, 148, 255), rgb(56, 86, 255));
     border-radius: 2px;
     box-shadow: inset 0px 1px 0px rgba(255,255,255,.4), 0px 1px 1px rgba(0,0,0,.1);
-    background-color: #FFE788;
+    background-color: #0f00db;
     margin-left: 5px;
     padding: 10px 12px;
     margin-top: 6px;
@@ -241,7 +242,7 @@ header {
 
     &:hover {
       background: linear-gradient(rgb(255, 231, 136), rgb(255, 231, 136));
-      background-color: #ffeca0;
+      background-color: #aea0ff;
     }
   }
 
