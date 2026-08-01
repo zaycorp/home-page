@@ -3,6 +3,7 @@ const label = document.getElementById('autoJbLabel');
 const checkbox = document.getElementById('autoJbInput');
 const jeilbrekBtn = document.getElementById('jeilbrek');
 const UAElement = document.getElementById("UA");
+const cacheProggress = document.getElementById('cacheprog');
 
 const storedAutoJb = localStorage.getItem("autoJb");
 let autoJbValue = storedAutoJb !== null ? storedAutoJb === "true" : true;
@@ -68,6 +69,7 @@ function jailbreakCountdown() {
 function cacheProgress(e) {
     var Percent = (Math.round(e.loaded / e.total * 100));
     document.title = "Caching: " + Percent + "%";
+	cacheProggress.textContent = "Caching: " + Percent + "%";
 }
 
 function displayCacheProgress() {
