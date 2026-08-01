@@ -4,42 +4,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSSFontFace exploit</title>
-  <link rel="stylesheet" href="includes/style.css">
+  <link rel="stylesheet" href="includes/bootstrap.min.css">
 </head>
 <body>
-
-  <h1>CSSFontFace UAF Exploit</h1>
-  <h3 id="UA">Running on:</h3>
-
-  <hr>
-
-  <div class="btn-container">
-    <form id="kernel-options">
-      <input type="radio" name="kernel" id="netctrl-exploit" value="netctrl">
-      <label for="netctrl-exploit">NetCtrl</label>
-      <input type="radio" name="kernel" id="lapse-exploit" value="lapse">
-      <label for="lapse-exploit">Lapse</label>
-    </form>
-    <button id="jeilbrek">Jailbreak</button>
-    <div class="autoJb">
-      <label for="autoJbInput" id="autoJbLabel">Auto Jailbreak</label>
-      <input class="mt-2" id="autoJbInput" type="checkbox">
-    </div>
+  <div class="container-fluid">
+<div class="card text-center">
+  <div class="card-header">
+     <h1>CSSFontFace UAF Exploit</h1>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Running on :</h5>
+    <p class="card-text" id="UA"></p>
+ 
+	  
+<form class="row g-3" id="kernel-options">
+  <div class="col-md-12">
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="kernel" id="lapse-exploit" value="lapse" checked>
+  <label class="form-check-label" for="lapse-exploit">
+    Lapse
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio"  name="kernel" id="netctrl-exploit" value="netctrl">
+  <label class="form-check-label" for="netctrl-exploit">
+    NetCtrl
+  </label>
+</div>
   </div>
 
-  <div class="main-layout">
-    <div class="media-box">
-      <img src="includes/cat.jpg" alt="A cat staring at you">
+  <div class="col-12">
+    <div class="form-check autoJb">	
+      <input class="form-check-input" type="checkbox" id="autoJbInput">
+      <label class="form-check-label" for="autoJbInput" id="autoJbLabel">
+       Auto Jailbreak
+      </label>
     </div>
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary" id="jeilbrek">Jailbreak</button>
+  </div>
+</form>
+	  
+  </div>
+  <div class="card-footer text-muted">
+	  	   <label id="cacheprog"> </label>
+   <div class="progress">
+  <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+</div>
+  </div>
+</div>
 
-    <pre id="console">Ready. Awaiting execution...
-  </pre>
+<div class="card mb-12" style="max-width: 100%;">
+  <div class="row g-0">
+    <div class="col-md-4">
+		 <img src="includes/cat.jpg" class="img-fluid rounded-start" alt="A cat staring at you">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+	       <pre id="console">Ready. Awaiting execution...</pre>
+      </div>
+    </div>
+  </div>
+</div>
 
 
   </div>
 
   <script src="src/main.js"></script>
   <script src="includes/script.js"></script>
+	<script src="src/bootstrap.bundle.js"></script>
 </body>
 
 </html>
